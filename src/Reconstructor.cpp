@@ -5,9 +5,9 @@ using namespace std;
 using namespace cv;
 
 int main() {
+  // prepare threads for motion tracking
   Reconstructor *reconstructor = new Reconstructor();
-  reconstructor->track_IMU();
-  reconstructor->track_IMU();
+  // end motion tracking, perform reconstruction
   reconstructor->reconstruct();
   delete reconstructor;
   reconstructor = nullptr;
@@ -23,8 +23,8 @@ void Reconstructor::track_image(const Mat &img) {
   motionEstimator->track_image(img);
 }
 
-void Reconstructor::track_IMU() {
-  motionEstimator->track_IMU(0);
+void Reconstructor::track_IMU(const double roll, const double pitch, const double yaw) {
+  motionEstimator->track_IMU(roll, pitch, yaw);
 }
 
 void Reconstructor::reconstruct() {

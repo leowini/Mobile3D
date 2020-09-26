@@ -14,8 +14,8 @@ void StructureEstimator::estimate_structure() {
   map.filter_feature_tracks();
   if (map.num_keyframes() < 2)
     return;
-  Keyframe *first_frame = *(map.get_keyframes().begin());
-  Keyframe *second_frame = *(map.get_keyframes().begin()+1);
+  Keyframe *first_frame = nullptr;//*(map.get_keyframes().begin());
+  Keyframe *second_frame = nullptr;//*(map.get_keyframes().begin()+1);
   // pick a reference point
   // this point's inverse depth will be held constant
   Mat T;
@@ -24,7 +24,7 @@ void StructureEstimator::estimate_structure() {
     calc_inverse_depth();
   }
   for (int i = 2; i < map.num_keyframes(); ++i) {
-    Keyframe *next_frame = *(map.get_keyframes().begin());
+    Keyframe *next_frame = nullptr;//*(map.get_keyframes().begin());
     estimate_translation(first_frame, next_frame);
     calc_inverse_depth();
   }
@@ -76,5 +76,5 @@ void StructureEstimator::loop_closure() {
 }
 
 void StructureEstimator::global_BA_g2o() {
-  Optimizer::GlobalBundleAdjustment(map.get_keyframes(), map.get_keypoints());
+
 }

@@ -16,7 +16,7 @@ class FeatureTracker {
 public:
   FeatureTracker(Map &map);
   void post_image(const Mat *image, const int *rot);
-  bool start_tracking();
+  void start_tracking();
   void exit_tracking_thread();
 private:
   void track(const Mat &image);

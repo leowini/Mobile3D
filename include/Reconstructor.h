@@ -14,7 +14,7 @@ public:
   Reconstructor();
   void reconstruct();
   void track_image(const Mat &img);
-  void track_IMU();
+  void track_IMU(const double roll, const double pitch, const double yaw);
   void cancel_reconstruction();
 private:
   Motion *motionEstimator;

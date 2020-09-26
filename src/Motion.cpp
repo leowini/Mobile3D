@@ -5,6 +5,7 @@
 using namespace std;
 
 Motion::Motion(Map &map) : map(map) {
+  // Start motion tracking threads
   feature_tracker = new FeatureTracker(map);
   IMU_integrator = new IMUIntegrator();
 }
@@ -18,7 +19,7 @@ void Motion::track_image(const Mat &image) {
   }
 }
 
-void Motion::track_IMU(int imu_data) {
+void Motion::track_IMU(const double roll, const double pitch, const double yaw) {
   int *imu_data_point = new int(0);
   IMU_integrator->post_IMU(imu_data_point);
 }

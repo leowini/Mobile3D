@@ -16,13 +16,12 @@ struct ThreadMsg {
 };
 
 FeatureTracker::FeatureTracker(Map &map) : map(map) {
-  bool started = start_tracking();
+  start_tracking();
 }
 
-bool FeatureTracker::start_tracking() {
+void FeatureTracker::start_tracking() {
   if (!tracking_thread)
     tracking_thread = new thread(&FeatureTracker::tracking_process, this);
-  return true;
 }
 
 void FeatureTracker::exit_tracking_thread() {
