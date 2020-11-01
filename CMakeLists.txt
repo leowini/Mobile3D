@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 project(mobile3d)
+set(OpenCV_DIR "/home/leo/build")
 set(CMAKE_CXX_STANDARD 14)
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp")
