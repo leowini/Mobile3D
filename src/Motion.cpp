@@ -26,7 +26,7 @@ void Motion::track_IMU(const double roll, const double pitch, const double yaw) 
 
 void Motion::stop_recording() {
   feature_tracker->exit_tracking_thread();
-  IMU_integrator->exit_IMU_thread();
+  //IMU_integrator->exit_IMU_thread();
   delete feature_tracker;
   delete IMU_integrator;
   feature_tracker = nullptr;
