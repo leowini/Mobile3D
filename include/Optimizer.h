@@ -2,7 +2,7 @@
 #define OPTIMIZER_H
 
 #include "Keyframe.h"
-#include "Keypoint.h"
+#include "Feature.h"
 #include <vector>
 
 using namespace std;

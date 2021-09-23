@@ -1,7 +1,7 @@
 FROM ubuntu
 WORKDIR /opencv
 # Install minimal prerequisites (Ubuntu 18.04 as reference)
-RUN apt update && apt install -y cmake g++ wget unzip ninja-build
+RUN apt update && apt install -y cmake g++ wget unzip ninja-build gdb
 # Download and unpack sources
 RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip
 RUN wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/master.zip

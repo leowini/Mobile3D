@@ -3,3 +3,7 @@
 DepthFusion::DepthFusion() {
 
 }
+
+void DepthFusion::TSDF() {
+
+}

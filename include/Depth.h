@@ -12,10 +12,10 @@ using namespace std;
 class Depth {
 public:
   Depth(Map &map, std::string sparse_pointcloud);
-  void reconstructDepth();
 private:
   DepthMapEstimator *depthMapEstimator;
   DepthFusion *depthFusion;
+  void reconstructDepth();
 };
 
 #endif

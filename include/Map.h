@@ -2,7 +2,7 @@
 #define MAP_H
 
 #include "Keyframe.h"
-#include "Keypoint.h"
+#include "Feature.h"
 #include <set>
 
 class Keyframe;

@@ -14,7 +14,7 @@ class IMUIntegrator {
 public:
   IMUIntegrator();
   void post_IMU(const int *imu_data);
-  bool start_IMU_thread();
+  void start_IMU_thread();
   void exit_IMU_thread();
   atomic<bool> ready_to_track;
   int get_rot();

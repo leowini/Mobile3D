@@ -1,7 +1,7 @@
 #ifndef KEYFRAME_H
 #define KEYFRAME_H
 
-#include "Keypoint.h"
+#include "Feature.h"
 #include <opencv2/core/mat.hpp>
 #include <vector>
 

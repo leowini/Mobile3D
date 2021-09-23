@@ -5,6 +5,7 @@
 Depth::Depth(Map &map, std::string sparse_pointcloud) {
   depthMapEstimator = new DepthMapEstimator();
   depthFusion = new DepthFusion();
+  reconstructDepth();
 }
 
 void Depth::reconstructDepth() {

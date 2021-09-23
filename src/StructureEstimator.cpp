@@ -45,12 +45,12 @@ void StructureEstimator::estimate_translation(Keyframe *first_frame, Keyframe *n
 void StructureEstimator::calc_inverse_depth() {
   int num_frames = 5;
   Mat top_sum, bottom_sum;
-  vector<Mat> xji;
+  vector<Mat> xj;
   Mat xj1;
-  Mat R;
+  vector<Mat> R;
   Mat T;
   for (int i = 1; i < num_frames; ++i) {
-    top_sum += (cross_op(xji.at(i)) * T).t() * cross_op(xji.at(i)) * R * xj1;
+    top_sum += (cross_op(xj.at(i)) * T).t() * cross_op(xj.at(i)) * R.at(i) * xj1;
     bottom_sum += 1;
   }
   Mat alpha_j;

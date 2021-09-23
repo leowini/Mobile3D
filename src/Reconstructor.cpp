@@ -11,7 +11,7 @@ int main() {
   reconstructor->reconstruct();
   delete reconstructor;
   reconstructor = nullptr;
-  cout << "success" << endl;
+  cout << "Success!" << endl;
   return 0;
 }
 
@@ -32,11 +32,9 @@ void Reconstructor::reconstruct() {
   delete motionEstimator;
   motionEstimator = nullptr;
   depthReconstructor = new Depth(map, sparse_pointcloud);
-  depthReconstructor->reconstructDepth();
   delete depthReconstructor;
   depthReconstructor = nullptr;
   meshReconstructor = new MeshReconstructor(tsdf_volume);
-  meshReconstructor->reconstructMesh();
   delete meshReconstructor;
   meshReconstructor = nullptr;
   textureMapper = new TextureMapper(mesh, map);

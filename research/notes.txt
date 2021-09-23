@@ -1,0 +1,8 @@
+Feature Detection:
+This detects important parts (features) of an image
+ - ORB - very good detection
+ - FAST - like the name says, fast
+
+2D Lucas Kanade (LK) tracker:
+This finds feature correspondences between images.
+Note: a subset of detected ORB features is chosen for tracking. A grid-based filtering is applied: an image is divided into cells, and the feature with the highest Shi-Tomasi response is taken from each cell.

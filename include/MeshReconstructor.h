@@ -4,8 +4,9 @@
 class MeshReconstructor {
 public:
   MeshReconstructor(int tsdf_volume);
+private:
   void reconstructMesh();
-  void tsdf_reprentation();
+  void tsdf_representation();
   void extract_isosurface();
 };
 

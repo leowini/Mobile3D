@@ -4,7 +4,8 @@
 class DepthFusion {
 public:
   DepthFusion();
-
+private:
+  void TSDF();
 };
 
 #endif
